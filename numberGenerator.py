@@ -26,15 +26,18 @@ def generateNumbers(n) -> list[int]:
     seed+=1
     return numbers
 
-def generateInputFiles(inputFolder) -> list[str]:
+def generateInputFiles(inputFolder, storeInputPath = None) -> list[str]:
     inputFiles = []
+    if (storeInputPath) :
+        pathFile = open(storeInputPath, 'w')
     for i in range(numberOfFiles):
         numbers = generateNumbers(valuesPerFiles)
         inputFiles.append(f"{inputFolder}/input{i}.txt")
+        if (storeInputPath) :
+            pathFile.write(f"{inputFolder}/input{i}.txt\n")
         file = open(f"{inputFolder}/input{i}.txt", "w")
         for number in numbers:
             file.write(str(number) + "\n")
-        file.close()
     return inputFiles
 
 

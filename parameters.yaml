@@ -2,6 +2,7 @@ main:
     input_folder: inputs
     output_folder: outputs
     outputModule: "outputGenerator1"
+    inputModule: "numberGenerator"
 
 numberGenerator:
     numberOfFiles: 10
