@@ -8,4 +8,4 @@ numberGenerator:
     numberOfFiles: 10
     seed: 4864645
     maxValue: 10
-    valuesPerFiles: 10000
+    valuesPerFiles: 100000
