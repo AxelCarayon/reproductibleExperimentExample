@@ -1,3 +1,4 @@
+import io
 import random
 import yaml
 
@@ -17,6 +18,22 @@ def loadParameters(file) -> None:
     valuesPerFiles = yaml_content.get('numberGenerator').get('valuesPerFiles')
     numberOfFiles = yaml_content.get('numberGenerator').get('numberOfFiles')
 
+def streamNumbers(n) -> io.BytesIO:
+    global seed
+    stream = io.BytesIO()
+    random.seed(seed)
+    for _ in range(n):
+        stream.write((str(random.randint(0, maxValue)) + "\n").encode())
+    seed+=1
+    return stream
+
+def readStream(stream):
+    stream.seek(0)
+    liste = []
+    for line in stream.readlines():
+        liste.append(int(line.strip()))
+    return liste
+
 def generateNumbers(n) -> list[int]:
     global seed
     numbers = []
@@ -26,12 +43,17 @@ def generateNumbers(n) -> list[int]:
     seed+=1
     return numbers
 
-def generateInputFiles(inputFolder, storeInputPath = None) -> list[str]:
+
+def generateInputFiles(inputFolder, storeInputPath = None, streamedData = None) -> list[str]:
     inputFiles = []
     if (storeInputPath) :
         pathFile = open(storeInputPath, 'w')
     for i in range(numberOfFiles):
-        numbers = generateNumbers(valuesPerFiles)
+        if (not streamedData):
+            numbers = generateNumbers(valuesPerFiles)
+        if (streamedData):
+            stream = streamNumbers(valuesPerFiles)
+            numbers = readStream(stream)
         inputFiles.append(f"{inputFolder}/input{i}.txt")
         if (storeInputPath) :
             pathFile.write(f"{inputFolder}/input{i}.txt\n")

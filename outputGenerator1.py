@@ -6,11 +6,6 @@ from numpy import loadtxt
 
 PARAMERTERS_FILE = "parameters.yaml"
 
-
-#def test():
-#    data = loadtxt(f"{input_folder}/input0.txt", delimiter="\n")
-#    print(data)
-
 def startExperiment(inputFiles,output_folder):
     cpt = 0
     for inputFile in inputFiles:
