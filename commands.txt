@@ -1,0 +1,2 @@
+python main.py -gs inputs.txt
+python main.py -i inputs.txt

@@ -1,0 +1,24 @@
+commands: commands.txt
+inputs:
+- input1.txt
+- input2.txt
+- input5.txt
+- input4.txt
+- input7.txt
+- input6.txt
+- input0.txt
+- input3.txt
+- input8.txt
+- input9.txt
+name: main
+outputs:
+- output2.png
+- output5.png
+- output6.png
+- output8.png
+- output9.png
+- output7.png
+- output1.png
+- output0.png
+- output3.png
+- output4.png

@@ -43,14 +43,13 @@ if __name__ == '__main__':
     loadParameters(PARAMERTERS_FILE)
     parser = argparse.ArgumentParser("prototype")
     g = parser.add_mutually_exclusive_group()
-    g.add_argument("-g", "--generate", action='store_true', help="Generate input files")
+    g.add_argument("-gr", "--generateAndRun", action='store_true', help="Generate input file and run the experiment")
     g.add_argument("-gs","--generateAndStore", help="Generate input files and store them in the specified folder")
-    g.add_argument("-i", "--input", help="Read input files described in the inputs.txt file")
+    parser.add_argument("-i", "--input", help="Read input files described in the inputs.txt file and run the experiment with them")
     parser.add_argument("-s","--stream", action='store_true', help="If data is generated, the data will be streamed")
-
     args = parser.parse_args()
     inputFiles = None
-    if args.generate:
+    if args.generateAndRun:
         module = importlib.import_module(inputModule)
         print(f"Generating input files with {inputModule}.py ...")
         if not folderExists(input_folder):
@@ -68,8 +67,9 @@ if __name__ == '__main__':
         inputFiles = readInputFile(args.input)
     else:
         parser.error("You must specify an input method")
-    print(f"Generating output with {outputModule}.py ...")
 
-    module = importlib.import_module(outputModule)
-    module.startExperiment(inputFiles,output_folder)
+    if args.generateAndRun or args.input:
+        print(f"Generating output with {outputModule}.py ...")
+        module = importlib.import_module(outputModule)
+        module.startExperiment(inputFiles,output_folder)
     
