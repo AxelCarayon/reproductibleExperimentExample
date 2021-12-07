@@ -10,7 +10,7 @@ inputs:
 - input3.txt
 - input8.txt
 - input9.txt
-name: mainExperiment1Experiment1Experiment1Experiment1
+name: main
 outputs:
 - output2.png
 - output5.png
