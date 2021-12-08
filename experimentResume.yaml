@@ -1,16 +1,19 @@
+checksums:
+- output2.png: 24eece6d17553c2b6b4e70f6d2f12a75
+- output5.png: 14a371b8a8f78ded52d80dfb821934d5
+- output6.png: f51bfb65c6cc478570c852f11064e50b
+- output8.png: 5ac9894f7d4ec9c8823b1f417fdf4262
+- output9.png: fd0b92a0dc75dbbe1c6d88957acb2591
+- output7.png: 57c8eddbfcdc2bd69d87e13ca4269360
+- output1.png: 173864c87d92ab1bf0a4dd26b09b5591
+- output0.png: 05d08f0b5ff86d2ebf3ac37095a049c8
+- output3.png: 4ebf327698560d728589ce4717f3d39b
+- output4.png: 2d377fada1d911ccbdbfb979f5ccf47c
+- .gitkeep: d41d8cd98f00b204e9800998ecf8427e
 commands: commands.txt
 inputs:
-- input1.txt
-- input2.txt
-- input5.txt
-- input4.txt
-- input7.txt
-- input6.txt
-- input0.txt
-- input3.txt
-- input8.txt
-- input9.txt
-name: mainExperiment1Experiment1Experiment1Experiment1
+- .gitkeep
+name: main
 outputs:
 - output2.png
 - output5.png
@@ -22,3 +25,4 @@ outputs:
 - output0.png
 - output3.png
 - output4.png
+- .gitkeep
