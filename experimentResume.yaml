@@ -1,24 +1,35 @@
+checksums:
+- output8.png: 01255c4b7e1e7f4df42df78cc9f55ca2
+- output1.png: fbbeafe89c043115e7c851fa8c23fbaa
+- output9.png: 7d3bd9505a60872957d8ae4d1b7c1fe7
+- output3.png: b85ea276ad86aeea4bcc764d860d8134
+- output0.png: b0fa70c2ef1e17d6c05f9316655d5702
+- output4.png: a0b71e3330383b95875b754c835ceca6
+- output2.png: d4c2e968060c72f5434b252b90539870
+- output5.png: 78d408145b26567926c815c1474e5ebf
+- output6.png: fb663db5744033afba159cccb6ff1550
+- output7.png: 925a703029d751e66bd07fcd9aac7c27
 commands: commands.txt
 inputs:
-- input1.txt
-- input2.txt
-- input5.txt
 - input4.txt
-- input7.txt
-- input6.txt
-- input0.txt
-- input3.txt
 - input8.txt
+- input0.txt
+- input7.txt
+- input1.txt
+- input5.txt
+- input2.txt
+- input6.txt
 - input9.txt
-name: mainExperiment1Experiment1Experiment1Experiment1
+- input3.txt
+name: main
 outputs:
+- output8.png
+- output1.png
+- output9.png
+- output3.png
+- output0.png
+- output4.png
 - output2.png
 - output5.png
 - output6.png
-- output8.png
-- output9.png
 - output7.png
-- output1.png
-- output0.png
-- output3.png
-- output4.png
