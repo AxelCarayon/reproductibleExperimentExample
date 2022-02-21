@@ -1,24 +1,39 @@
-commands: commands.txt
+checksums:
+- outputs/output8.png: 01255c4b7e1e7f4df42df78cc9f55ca2
+- outputs/output1.png: fbbeafe89c043115e7c851fa8c23fbaa
+- outputs/output9.png: 7d3bd9505a60872957d8ae4d1b7c1fe7
+- outputs/output3.png: b85ea276ad86aeea4bcc764d860d8134
+- outputs/output0.png: b0fa70c2ef1e17d6c05f9316655d5702
+- outputs/output4.png: a0b71e3330383b95875b754c835ceca6
+- outputs/output2.png: d4c2e968060c72f5434b252b90539870
+- outputs/output5.png: 78d408145b26567926c815c1474e5ebf
+- outputs/output6.png: fb663db5744033afba159cccb6ff1550
+- outputs/output7.png: 925a703029d751e66bd07fcd9aac7c27
+commands: null
+dockerfile: true
 inputs:
-- input1.txt
-- input2.txt
-- input5.txt
-- input4.txt
-- input7.txt
-- input6.txt
-- input0.txt
-- input3.txt
-- input8.txt
-- input9.txt
-name: mainExperiment1Experiment1Experiment1Experiment1
+- inputs/input4.txt
+- inputs/input8.txt
+- inputs/input0.txt
+- inputs/input7.txt
+- inputs/input1.txt
+- inputs/input5.txt
+- inputs/input2.txt
+- inputs/input6.txt
+- inputs/input9.txt
+- inputs/input3.txt
+instruction: null
+name: main
 outputs:
-- output2.png
-- output5.png
-- output6.png
-- output8.png
-- output9.png
-- output7.png
-- output1.png
-- output0.png
-- output3.png
-- output4.png
+- outputs/output8.png
+- outputs/output1.png
+- outputs/output9.png
+- outputs/output3.png
+- outputs/output0.png
+- outputs/output4.png
+- outputs/output2.png
+- outputs/output5.png
+- outputs/output6.png
+- outputs/output7.png
+params:
+- params/runExperiment.sh
